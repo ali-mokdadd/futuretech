@@ -1,18 +1,49 @@
-import { Link } from "react-router-dom";
+import { useState } from "react";
+import { NavLink } from "react-router-dom";
 
 function Navbar() {
+  const [menuOpen, setMenuOpen] = useState(false);
+
+  const closeMenu = () => {
+    setMenuOpen(false);
+  };
+
   return (
-    <nav>
+    <nav className="navbar">
       <div>
-        <h2>FutureTech</h2>
+        <NavLink to="/" className="logo" onClick={closeMenu}>
+          FutureTech
+        </NavLink>
       </div>
 
-      <div>
-        <Link to="/">Home</Link>
-        <Link to="/technologies">Technologies</Link>
-        <Link to="/future">Future of IT</Link>
-        <Link to="/about">About</Link>
-        <Link to="/contact">Contact</Link>
+      <button
+  className="menu-toggle"
+  onClick={() => setMenuOpen(!menuOpen)}
+  aria-label="Toggle navigation"
+>
+  {menuOpen ? "✕" : "☰"}
+</button>
+
+      <div className={`nav-links ${menuOpen ? "open" : ""}`}>
+        <NavLink to="/" end onClick={closeMenu}>
+          Home
+        </NavLink>
+
+        <NavLink to="/technologies" onClick={closeMenu}>
+          Technologies
+        </NavLink>
+
+        <NavLink to="/future" onClick={closeMenu}>
+          Future of IT
+        </NavLink>
+
+        <NavLink to="/about" onClick={closeMenu}>
+          About
+        </NavLink>
+
+        <NavLink to="/contact" onClick={closeMenu}>
+          Contact
+        </NavLink>
       </div>
     </nav>
   );

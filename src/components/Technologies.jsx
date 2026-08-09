@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 const technologies = [
   {
     title: "Artificial Intelligence",
@@ -54,7 +55,7 @@ function Technologies() {
 
             <p>{technology.description}</p>
 
-            <a href="#">Learn more →</a>
+            <Link to="/technologies">Learn more →</Link> 
           </article>
         ))}
       </div>
