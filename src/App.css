@@ -269,3 +269,210 @@ nav a:hover {
     min-height: auto;
   }
 }
+/* General Page */
+
+.page {
+  padding: 80px 8%;
+  min-height: 80vh;
+}
+
+.page-header {
+  max-width: 700px;
+  margin-bottom: 55px;
+}
+
+.page-header > p {
+  font-size: 13px;
+  letter-spacing: 2px;
+  color: #777;
+  font-weight: 600;
+  margin-bottom: 12px;
+}
+
+.page-header h1 {
+  font-size: 48px;
+  margin-bottom: 20px;
+  color: #111;
+}
+
+.page-header span {
+  display: block;
+  color: #666;
+  font-size: 17px;
+  line-height: 1.7;
+}
+
+
+/* Technologies Page */
+
+.technology-page-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+
+.technology-page-card {
+  border-top: 1px solid #ccc;
+  padding: 30px 0 40px;
+}
+
+.technology-index {
+  color: #999;
+  font-size: 13px;
+}
+
+.technology-page-card h2 {
+  font-size: 26px;
+  margin: 25px 0 12px;
+}
+
+.technology-page-card p {
+  color: #666;
+  line-height: 1.7;
+  max-width: 520px;
+}
+
+@media (max-width: 650px) {
+  .page {
+    padding: 60px 5%;
+  }
+
+  .page-header h1 {
+    font-size: 38px;
+  }
+
+  .technology-page-grid {
+    grid-template-columns: 1fr;
+  }
+}
+/* Future of IT Page */
+
+.future-list {
+  max-width: 900px;
+}
+
+.future-item {
+  display: grid;
+  grid-template-columns: 60px 1fr;
+  gap: 25px;
+  padding: 35px 0;
+  border-top: 1px solid #ddd;
+}
+
+.future-item > span {
+  color: #999;
+  font-size: 13px;
+  padding-top: 7px;
+}
+
+.future-item h2 {
+  font-size: 25px;
+  margin-bottom: 12px;
+  color: #111;
+}
+
+.future-item p {
+  color: #666;
+  line-height: 1.7;
+  max-width: 700px;
+}
+
+@media (max-width: 650px) {
+  .future-item {
+    grid-template-columns: 1fr;
+    gap: 10px;
+  }
+}
+/* About Page */
+
+.about-content {
+  max-width: 900px;
+}
+
+.about-content > div {
+  padding: 30px 0;
+  border-top: 1px solid #ddd;
+}
+
+.about-content h2 {
+  font-size: 25px;
+  margin-bottom: 12px;
+  color: #111;
+}
+
+.about-content p {
+  color: #666;
+  line-height: 1.7;
+  max-width: 700px;
+}data/* Contact Page */
+
+.contact-form {
+  max-width: 750px;
+}
+
+.form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 22px;
+}
+
+.form-group label {
+  font-size: 14px;
+  font-weight: 600;
+  margin-bottom: 8px;
+  color: #222;
+}
+
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  padding: 13px 14px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  background: #fff;
+  font-family: inherit;
+  font-size: 15px;
+  outline: none;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+  border-color: #333;
+}
+
+.form-group textarea {
+  resize: vertical;
+}
+
+.contact-form button {
+  border: none;
+  background: #111;
+  color: white;
+  padding: 14px 25px;
+  font-size: 15px;
+  cursor: pointer;
+  border-radius: 3px;
+}
+
+.contact-form button:hover {
+  background: #333;
+}
+
+.success-message {
+  margin-top: 20px;
+  color: #287a3e;
+  font-size: 15px;
+}
+
+@media (max-width: 650px) {
+  .form-row {
+    grid-template-columns: 1fr;
+    gap: 0;
+  }
+}

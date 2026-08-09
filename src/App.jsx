@@ -4,6 +4,10 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Navbar from "./components/Navbar";
 import Hero from "./components/Hero";
 import Technologies from "./components/Technologies";
+import TechnologiesPage from "./pages/TechnologiesPage";
+import FuturePage from "./pages/FuturePage";
+import AboutPage from "./pages/AboutPage";
+import ContactPage from "./pages/ContactPage";
 
 function Home() {
   return (
@@ -12,22 +16,6 @@ function Home() {
       <Technologies />
     </>
   );
-}
-
-function TechnologiesPage() {
-  return <h1 style={{ padding: "80px 8%" }}>Technologies</h1>;
-}
-
-function FuturePage() {
-  return <h1 style={{ padding: "80px 8%" }}>Future of IT</h1>;
-}
-
-function AboutPage() {
-  return <h1 style={{ padding: "80px 8%" }}>About</h1>;
-}
-
-function ContactPage() {
-  return <h1 style={{ padding: "80px 8%" }}>Contact</h1>;
 }
 
 function App() {
