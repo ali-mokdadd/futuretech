@@ -1,15 +1,12 @@
 import "./App.css";
 import Navbar from "./components/Navbar";
+import Hero from "./components/Hero";
 
 function App() {
   return (
     <>
       <Navbar />
-
-      <main>
-        <h1>FutureTech</h1>
-        <p>Exploring the technologies shaping our future.</p>
-      </main>
+      <Hero />
     </>
   );
 }
