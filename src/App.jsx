@@ -8,6 +8,7 @@ import TechnologiesPage from "./pages/TechnologiesPage";
 import FuturePage from "./pages/FuturePage";
 import AboutPage from "./pages/AboutPage";
 import ContactPage from "./pages/ContactPage";
+import Footer from "./components/Footer";
 
 function Home() {
   return (
@@ -30,6 +31,8 @@ function App() {
         <Route path="/about" element={<AboutPage />} />
         <Route path="/contact" element={<ContactPage />} />
       </Routes>
+
+      <Footer />
     </BrowserRouter>
   );
 }
