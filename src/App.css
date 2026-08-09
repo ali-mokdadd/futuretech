@@ -187,3 +187,85 @@ nav a:hover {
 .technology-card a:hover {
   text-decoration: underline;
 }
+/* Responsive Design */
+
+@media (max-width: 900px) {
+  nav {
+    padding: 0 5%;
+  }
+
+  nav div:last-child {
+    gap: 18px;
+  }
+
+  .hero {
+    padding: 70px 6%;
+  }
+
+  .hero h1 {
+    font-size: 46px;
+  }
+
+  .technology-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 650px) {
+  nav {
+    height: auto;
+    padding: 20px 5%;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 18px;
+  }
+
+  nav div:last-child {
+    flex-wrap: wrap;
+    gap: 14px 20px;
+  }
+
+  nav a {
+    font-size: 14px;
+  }
+
+  .hero {
+    min-height: auto;
+    padding: 70px 5%;
+  }
+
+  .hero h1 {
+    font-size: 38px;
+    letter-spacing: -1px;
+  }
+
+  .hero-description {
+    font-size: 16px;
+  }
+
+  .hero-buttons {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .hero-buttons a {
+    width: 100%;
+    text-align: center;
+  }
+
+  .technologies {
+    padding: 70px 5%;
+  }
+
+  .section-heading h2 {
+    font-size: 30px;
+  }
+
+  .technology-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .technology-card {
+    min-height: auto;
+  }
+}
