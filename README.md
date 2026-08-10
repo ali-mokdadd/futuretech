@@ -1,6 +1,6 @@
 # FutureTech
 
-FutureTech is a ReactJS web application developed for the CSCI390 Web Programming course.
+FutureTech is a ReactJS web application.
 
 The website provides information about emerging technologies and how they are changing the world around us. It covers topics such as Artificial Intelligence, Robotics, Quantum Computing, Internet of Things, Virtual Reality, and Cybersecurity.
 
