@@ -1,64 +1,108 @@
+import { useState } from "react";
 import { Link } from "react-router-dom";
+
 const technologies = [
   {
     title: "Artificial Intelligence",
     description:
-      "AI allows machines to perform tasks that normally require human intelligence, such as learning, reasoning, and decision-making.",
+      "AI enables computers to learn from data, recognize patterns, understand language, and support decision-making. It is already used in healthcare, education, transportation, finance, and everyday applications.",
   },
   {
     title: "Robotics",
     description:
-      "Robotics combines engineering and computer science to create machines that can perform physical tasks automatically.",
+      "Robotics combines programming, electronics, sensors, and mechanical engineering. Robots can perform repetitive, dangerous, or precise tasks in factories, hospitals, warehouses, and even homes.",
   },
   {
     title: "Quantum Computing",
     description:
-      "Quantum computers use quantum mechanics to solve certain problems much faster than traditional computers.",
+      "Quantum computers use qubits instead of traditional bits. They may eventually solve scientific, optimization, and cryptography problems much faster than traditional computers.",
   },
   {
     title: "Internet of Things",
     description:
-      "IoT connects everyday devices to the internet so they can collect data, communicate, and work together.",
+      "The Internet of Things connects physical devices such as watches, cars, appliances, cameras, and sensors to the internet so they can exchange data.",
   },
   {
     title: "Virtual Reality",
     description:
-      "Virtual Reality creates digital environments that users can explore and interact with using specialized devices.",
+      "Virtual Reality creates immersive digital environments and is used in gaming, education, training, architecture, medicine, and simulation.",
   },
   {
     title: "Cybersecurity",
     description:
-      "Cybersecurity protects computers, networks, systems, and data from attacks, unauthorized access, and damage.",
+      "Cybersecurity protects computers, networks, applications, and personal information from attacks, unauthorized access, and digital threats.",
   },
 ];
 
 function Technologies() {
+  const [search, setSearch] = useState("");
+
+  const filteredTechnologies = technologies.filter((technology) => {
+    const searchValue = search.toLowerCase();
+
+    return (
+      technology.title.toLowerCase().includes(searchValue) ||
+      technology.description.toLowerCase().includes(searchValue)
+    );
+  });
+
   return (
     <section className="technologies">
       <div className="section-heading">
         <p>TECHNOLOGIES</p>
+
         <h2>Explore emerging technologies</h2>
+
         <span>
-          Learn about some of the technologies that are changing modern
-          computing and everyday life.
+          Search and learn about some of the technologies changing our world.
         </span>
       </div>
 
-      <div className="technology-grid">
-        {technologies.map((technology, index) => (
-          <article className="technology-card" key={index}>
-            <span className="card-number">
-              {String(index + 1).padStart(2, "0")}
-            </span>
+      <div className="technology-search">
+        <input
+          type="text"
+          placeholder="Search technologies..."
+          value={search}
+          onChange={(e) => setSearch(e.target.value)}
+        />
 
-            <h3>{technology.title}</h3>
-
-            <p>{technology.description}</p>
-
-            <Link to="/technologies">Learn more →</Link> 
-          </article>
-        ))}
+        {search && (
+          <button onClick={() => setSearch("")}>
+            Clear
+          </button>
+        )}
       </div>
+
+      {filteredTechnologies.length > 0 ? (
+        <div className="technology-grid">
+          {filteredTechnologies.map((technology, index) => (
+            <article
+              className="technology-card"
+              key={technology.title}
+            >
+              <span className="card-number">
+                {String(index + 1).padStart(2, "0")}
+              </span>
+
+              <h3>{technology.title}</h3>
+
+              <p>{technology.description}</p>
+
+              <Link to="/technologies">
+                Learn more →
+              </Link>
+            </article>
+          ))}
+        </div>
+      ) : (
+        <div className="no-results">
+          <h3>No technology found</h3>
+
+          <p>
+            Try searching for AI, robotics, quantum, IoT, VR, or cybersecurity.
+          </p>
+        </div>
+      )}
     </section>
   );
 }

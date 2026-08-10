@@ -1,3 +1,4 @@
+import aboutImage from "../assets/images/about-tech.jpg";
 function AboutPage() {
   return (
     <main className="page">
@@ -11,7 +12,24 @@ function AboutPage() {
           society and the future of information technology.
         </span>
       </div>
+<section className="about-intro">
+  <div className="about-image">
+    <img src={aboutImage} alt="Technology and innovation" />
+  </div>
 
+  <div className="about-intro-text">
+    <p>LEARNING ABOUT THE FUTURE</p>
+
+    <h2>Technology is becoming part of everyday life.</h2>
+
+    <span>
+      FutureTech was created to help students and visitors understand
+      important technologies in a simple and accessible way. From artificial
+      intelligence to cybersecurity, these technologies are influencing how
+      we communicate, work, learn, and solve problems.
+    </span>
+  </div>
+</section>
       <section className="about-content">
         <div>
           <h2>Our Purpose</h2>
