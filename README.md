@@ -45,7 +45,7 @@ Contains a simple contact form where visitors can enter their name, email, subje
 First, clone the repository:
 
 ```bash
-git clone YOUR_REPOSITORY_URL
+git clone https://github.com/ali-mokdadd/futuretech.git
 ```
 
 Enter the project directory:
